@@ -4,7 +4,7 @@ from model.cnn import Net
 from model.AlexNet import AlexNet
 from model.VGG import VGG
 from torch.utils.data import DataLoader
-from data.dataset import Pulse
+from dataset import Pulse
 import torch.nn.functional as F
 from torch.autograd import Variable
 

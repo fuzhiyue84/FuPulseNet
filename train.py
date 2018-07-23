@@ -4,7 +4,7 @@ from model.cnn import Net
 from model.AlexNet import AlexNet
 from model.VGG import VGG
 from torch.utils.data import DataLoader
-from dataset import Pulse
+from datas import Pulse
 import torch.nn.functional as F
 from torch.autograd import Variable
 
@@ -16,7 +16,7 @@ fc_features = net.fc.in_features
 net.fc = nn.Linear(fc_features, 4)
 #net = net
 print(net)
-dataset = Pulse('/input/data')
+dataset = Pulse('./input/data')
 dataloader = DataLoader(dataset, batch_size=50, shuffle=True, num_workers=0, drop_last=False)
 #定义损失函数和优化器
 criterion = nn.CrossEntropyLoss()  # 交叉熵损失函数

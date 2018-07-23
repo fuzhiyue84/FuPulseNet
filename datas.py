@@ -21,7 +21,9 @@ class Pulse(data.Dataset):
     """docstring for  """
 
     def __init__(self, root, transforms = transform):
+        print("my dream your team")
         imgs = os.listdir(root)
+        print("locaksd")
         self.imgs = [os.path.join(root, img) for img in imgs]
         self.transforms = transforms
 
